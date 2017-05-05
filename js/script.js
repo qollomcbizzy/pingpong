@@ -1,8 +1,12 @@
 $(document).ready(function(){
+  //the backend logic
+  var change=function(x){
+
+  };
   $("form#pingpong").submit(function(event){
     event.preventDefault();
-    var number=parseInt($("input#number").val());
-    if(String(number).match(/[0123456789]/)){
+    var number=String(parseInt($("input#number").val()));
+    if(number.match(/[0123456789]/)){
         $("#output").text(number);
     }
     else {
