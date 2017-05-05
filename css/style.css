@@ -1,0 +1,30 @@
+#container{
+  border:1px solid rgb(198, 209, 213);
+}
+ #header{
+   text-align: center;
+   padding-top: 15px;
+   background-color: inherit;
+   font-size: 30px;
+   font-weight: bold;
+   background: linear-gradient(to right, rgb(198, 226, 245),rgb(198, 213, 245),rgb(198, 213, 213));
+ }
+h2{
+  color: blue;
+}
+h3{
+  color: blue;
+  font-size: 20px;
+  font-weight: 300;
+  word-spacing: 2px;
+}
+#about{
+  background-color: rgb(215, 247, 213);
+  border-right: 1px solid;
+  padding-left: 30px;
+}
+h4{
+  color:black;
+  font-weight: bolder;
+  font-size: 15px;
+}
