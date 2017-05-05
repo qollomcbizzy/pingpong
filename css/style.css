@@ -19,12 +19,18 @@ h3{
   word-spacing: 2px;
 }
 #about{
-  background-color: rgb(215, 247, 213);
-  border-right: 1px solid;
   padding-left: 30px;
+  padding-bottom: 60px;
 }
 h4{
   color:black;
   font-weight: bolder;
   font-size: 15px;
+}
+#playarea{
+  padding-bottom: 50px;
+    border-left: 1px solid;
+}
+.not{
+  display: none;
 }
