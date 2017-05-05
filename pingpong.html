@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery.js"></script>
+  <script src="js/script.js"></script>
+  <title>pingpong</title>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="row" id="header">
+      <div class="col-md-5 col-md-offset-3">
+        <h2>PING PONG</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4" id="about">
+        <div class="row">
+          <div class="col-md-9 col-md-offset-2">
+            <h3>ABOUT THE PING PONG</h3>
+          </div>
+          <h4>CREATED BY:</h4>
+          <i>qollo mcbizzy</i><br />
+          <h4>GITHUB USERNAME/URL:</h4>
+          <strong>https://www.qollomcbizzy.github.io/pingpong</strong>
+        </div>
+      </div>
+      <div class="col-md-5" id="playarea">
+        <h3><marquee direction="right">welcome to the game</marquee></h3>
+        <h3>Lets play!!!</h3>
+        <h4>Rules</h4>
+        <ol>
+          <li>Enter a number that is large enough e.g 100.</li>
+          <li>The number that is divisible by 3 is replace by "ping".</li>
+          <li>The number that is divisible by 5 is replace by "pong".</li>
+          <li>The number that is divisible by 15 is replace by "pingpong".</li>
+        </ol>
+        <div class="col-md-8 col-md-offset-2">
+          <form id="pingpong">
+            <label for="pingpong">Enter a number</label>
+            <div class="row">
+              <div class="col-md-7">
+                <input type="text" class="form-control" id="number">
+              </div>
+              <div class="col-md-3 ">
+                <button type="submit" class="btn btn-primary">Play!!!</button>
+              </div>
+            </div>
+          </form>
+          <!--div for the output -->
+          <div class="row">
+            <div class="col-md-9">
+              <h3>YOUR ANSWER:</h3>
+              <ul class="unstyled" id="output">
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="footer">
+      <strong>Info@qollomcbizzy.com</strong>
+    </div>
+  </div>
+</body>
+</html>
