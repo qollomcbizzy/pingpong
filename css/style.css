@@ -4,6 +4,7 @@
  #header{
    text-align: center;
    padding-top: 15px;
+   padding-bottom: 20px;
    background-color: inherit;
    font-size: 30px;
    font-weight: bold;
@@ -19,8 +20,11 @@ h3{
   word-spacing: 2px;
 }
 #about{
+  background-color: rgb(198, 206, 241);
   padding-left: 30px;
   padding-bottom: 60px;
+  height: 700px;
+  border-right: 1px solid;
 }
 h4{
   color:black;
@@ -29,5 +33,12 @@ h4{
 }
 #playarea{
   padding-bottom: 50px;
-    border-left: 1px solid;
+}
+#footer{
+  background-color:rgb(198, 237, 241);
+  height:80px;
+  text-align:center;
+  font-size: 15px;
+  font-weight: bold;
+  color:blue;
 }

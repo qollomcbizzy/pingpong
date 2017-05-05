@@ -31,7 +31,9 @@ $(document).ready(function(){
     var number=String(parseInt($("input#number").val()));
     if(number.match(/[0123456789]/)){
     var result=countUp(number);
-      $("#output").text(result);
+    result.forEach(function(num){
+   $("#output").append('<li>' + num+ '</li>');
+    });
     }
     else {
       var not="That's not a number";
