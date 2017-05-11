@@ -28,16 +28,18 @@ $(document).ready(function(){
 //User Interface Logic
   $("form#pingpong").submit(function(event){
     event.preventDefault();
+    $("li.remove").remove();
     var number=String(parseInt($("input#number").val()));
     if(number.match(/[0123456789]/)){
     var result=countUp(number);
     result.forEach(function(num){
-   $("#output").append('<li>' + num+ '</li>');
+   $("#output").append('<li class="remove">' + num+ '</li>');
     });
     }
     else {
       var not="That's not a number";
       $("#output").text(not);
     }
+    $("form#pingpong")[0].reset();
   });
 });
