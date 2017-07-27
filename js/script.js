@@ -1,6 +1,10 @@
-$(document).ready(function(){
+
   //the backend logic
-  var countUp = function(countTo){
+  //to change the color of the calculator
+  function Calculator(skinName){
+    this.skin=skinName;
+  }
+  Calculator.prototype.pingPong=function(countTo){
   var result = [];
   for(var i = 1; i <= countTo; i++){
      var index = result.indexOf(i);
@@ -25,21 +29,6 @@ $(document).ready(function(){
        }
        return result;
        };
-//User Interface Logic
-  $("form#pingpong").submit(function(event){
-    event.preventDefault();
-    $("li.remove").remove();
-    var number=String(parseInt($("input#number").val()));
-    if(number.match(/[0123456789]/)){
-    var result=countUp(number);
-    result.forEach(function(num){
-   $("#output").append('<li class="remove">' + num+ '</li>');
-    });
-    }
-    else {
-      var not="That's not a number";
-      $("#output").text(not);
-    }
-    $("form#pingpong")[0].reset();
-  });
-});
+
+//using node exports
+exports.calculatorModule=Calculator;
