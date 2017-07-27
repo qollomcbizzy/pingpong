@@ -1,6 +1,10 @@
-$(document).ready(function(){
+
   //the backend logic
-  var countUp = function(countTo){
+  //to change the color of the calculator
+  function Calculator(skinName){
+    this.skin=skinName;
+  }
+  Calculator.prototype.pingPong=function(countTo){
   var result = [];
   for(var i = 1; i <= countTo; i++){
      var index = result.indexOf(i);
@@ -25,6 +29,7 @@ $(document).ready(function(){
        }
        return result;
        };
+<<<<<<< HEAD
 //User Interface Logic
   $("form#pingpong").submit(function(event){
     event.preventDefault();
@@ -43,3 +48,8 @@ $(document).ready(function(){
     $("form#pingpong")[0].reset();
   });
 });
+=======
+
+//using node exports
+exports.calculatorModule=Calculator;
+>>>>>>> gh-pages
