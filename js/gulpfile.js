@@ -2,13 +2,14 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
+var uglify = require('gulp-uglify')
 gulp.task('concatInterface',function(){
   return gulp.src(['./js/*-interface.js'])
   //gulp.src it is used to pull all the files that used  in the browser and they are formatted in an array
   //* use the * to combine all the files that have interface instead of repeating
   .pipe(concat('allConcat.js'))
   //cancat() function is called from the top that we have required that creates a file into whic it would be stored
-  .pipe(gulp.dest('./tmp/js'));
+  .pipe(gulp.dest('./tmp'));
   //we tell the files where to be stored
 });
 gulp.task('jsBrowserify',['concatInterface'],function(){
@@ -21,4 +22,9 @@ gulp.task('jsBrowserify',['concatInterface'],function(){
   //creates file called app.js
   .pipe(gulp.dest('./build/js'));
   //creates a folder to which the app.js will be keep thats is named *js*
+});
+gulp.task('minifyScripts',['jsBrowserify'],function(){
+  return gulp.src(['./build/js/app.js'])
+  .pipe(uglify())
+  .pipe(gulp.dest('./build/js'));
 });
